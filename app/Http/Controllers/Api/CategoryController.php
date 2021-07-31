@@ -24,7 +24,8 @@ class CategoryController extends Controller
         $category_id = request('category_id') ?? null;
         if ($category_id) {
             $conditions = ['parent_id' => $category_id];
-            $data = $this->getByPaginate(Category::class, $conditions, [], $page_size);
+            $data = Category::where($conditions)->paginate($page_size);
+
         } else {
             $categories_id = Category::where('parent_id', null)->pluck('id');
             $data = Category::whereIn('parent_id', $categories_id)->paginate($page_size);
