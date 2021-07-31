@@ -81,7 +81,9 @@ class DataSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make('password'),
             'name' => 'admin',
-            'email_verified_at' => now()
+            'email_verified_at' => now(),
+            'role_id ' => 1,
+            'avatar' => 'users/default.png'
         ]);
     }
 }
