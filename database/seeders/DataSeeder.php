@@ -77,6 +77,13 @@ class DataSeeder extends Seeder
             Category::create($category);
         }
 
-        
+        User::create([
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('password'),
+            'name' => 'admin',
+            'email_verified_at' => now(),
+            'role_id ' => 1,
+            'avatar' => 'users/default.png'
+        ]);
     }
 }
