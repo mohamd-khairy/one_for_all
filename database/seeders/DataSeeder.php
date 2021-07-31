@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DataSeeder extends Seeder
 {
@@ -74,5 +76,12 @@ class DataSeeder extends Seeder
         foreach ($categories as $category) {
             Category::create($category);
         }
+
+        User::create([
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('password'),
+            'name' => 'admin',
+            'email_verified_at' => now()
+        ]);
     }
 }
