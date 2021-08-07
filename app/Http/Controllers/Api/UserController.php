@@ -115,11 +115,11 @@ class UserController extends Controller
         $user = User::where('email', $request->email)->first();
         $user->update(['code' => rand(1000, 9999)]);
 
-        try {
+        // try {
             $user->notify(new ForgetPasswordEmail($user->code));
-        } catch (\Throwable $th) {
-            //throw $th;
-        }
+        // } catch (\Throwable $th) {
+        //     //throw $th;
+        // }
 
         return responseSuccess([], 'Check Your Email Address.');
     }
