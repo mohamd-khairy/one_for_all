@@ -39,7 +39,7 @@ return [
             'host' => 'smtp.sendgrid.net',//env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => '465',//env('MAIL_PORT', 587),
             'encryption' => 'ssl',// env('MAIL_ENCRYPTION', 'tls'),
-            'username' => 'oneforall',// env('MAIL_USERNAME'),
+            'username' => 'apikey',// env('MAIL_USERNAME'),
             'password' => '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',//env('MAIL_PASSWORD'),
             'timeout' => null,
             'auth_mode' => null,
