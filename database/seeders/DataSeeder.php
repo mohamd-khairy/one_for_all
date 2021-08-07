@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class DataSeeder extends Seeder
@@ -77,13 +78,14 @@ class DataSeeder extends Seeder
             Category::create($category);
         }
 
-        User::create([
+        $user = User::create([
             'email' => 'admin@admin.com',
             'password' => Hash::make('password'),
             'name' => 'admin',
             'email_verified_at' => now(),
-            'role_id ' => 1,
             'avatar' => 'users/default.png'
         ]);
+
+        $user->update(['role_id' => 1]);
     }
 }
