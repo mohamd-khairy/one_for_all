@@ -56,6 +56,7 @@
             "@php artisan key:generate --ansi"
         ],
         "compile": [
+            "php artisan clear-compiled",
             "chmod -R 777 storage",
             "php artisan passport:keys",
             "php artisan optimize"
