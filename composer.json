@@ -57,7 +57,8 @@
         ],
         "compile": [
             "chmod -R 777 storage",
-            "php artisan passport:keys"
+            "php artisan passport:keys",
+            "php artisan optimize"
         ]
     },
     "extra": {
