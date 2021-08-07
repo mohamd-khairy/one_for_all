@@ -84,7 +84,7 @@ return [
     */
 
     'from' => [
-        'address' => 'm.khairy@evntoo.com',
+        'address' => 'mohamed.khairy.eg@gmail.com',
         'name' => 'One For All',
     ],
 
